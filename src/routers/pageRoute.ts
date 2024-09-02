@@ -13,7 +13,9 @@ export class PageRoute extends Route{
     }
 
     protected setRoutes(): void {
-        this.router.get(`${this.url}`,this.Contorller.sendPage)
+        this.router.get(`${this.url}`,(req, res)=>{
+            this.Contorller.sendPage(req, res);
+        })
     }
 
 }

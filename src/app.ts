@@ -8,9 +8,10 @@ require('dotenv').config()
 const app: express.Application = express()
 const server = http.createServer(app);
 
-const DB = new MongoDB({
+export const DB = new MongoDB({
   host:process.env.DBHOST as string,
-  port:process.env.DBPORT as string
+  port:process.env.DBPORT as string,
+  name:process.env.DBNAME as string
 });
 
 app.use(cors({

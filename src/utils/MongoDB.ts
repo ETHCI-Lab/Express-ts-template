@@ -9,7 +9,7 @@ export class MongoDB {
 
     constructor(info: MongoInfo) {
 
-        const url = `mongodb://${info.host}:${info.port}/`
+        const url = `mongodb://${info.host}:${info.port}/${info.name}`
 
         this.init(url).then(() => {
 
