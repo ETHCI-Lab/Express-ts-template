@@ -1,4 +1,5 @@
 export interface MongoInfo{
     host:string,
-    port:string
+    port:string,
+    name:string
 }
