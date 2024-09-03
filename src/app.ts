@@ -30,7 +30,7 @@ for (const route of router) {
   app.use(route.getRouter())
 }
 
-server.listen(process.env.Port, () => {
+server.listen(process.env.PORT, () => {
   logger.info('listening on *:'+process.env.Port);
 });
 
